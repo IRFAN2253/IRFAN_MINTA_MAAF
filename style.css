@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://png.pngtree.com/background/20210716/original/pngtree-islamic-background-design-for-eid-al-fitr-elegant-picture-image_1361684.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#daun-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.daun {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: #17d81d;
+    opacity: 0.7;
+    animation: daunBerterbangan 5s linear infinite;
+    clip-path: polygon(50% 0%, 65% 10%, 80% 25%, 95% 40%, 100% 50%, 95% 60%, 80% 75%, 65% 90%, 50% 100%, 35% 90%, 20% 75%, 5% 60%, 0% 50%, 5% 40%, 20% 25%, 35% 10%);
+}
+
+/* Animasi daun berterbangan */
+@keyframes daunBerterbangan {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(100vw * var(--randomX)), calc(100vh * var(--randomY))) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    background-color: #ffffff74;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #00602a;
+    margin-bottom: 20px;
+}
+
+.personal {
+    color: #355200;
+    margin-bottom: 15px;
+}
+
+.personal-nama {
+    border-bottom: 1.5px solid #000000;
+}
+
+.pesan {
+    color: #005c17;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.tombol-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.tombol {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.salah {
+    background-color: #dc143c;
+}
+
+.setengah {
+    background-color: #ffa500;
+}
+
+.tidak {
+    background-color: #2e8b57;
+}
+
+.tombol:hover {
+    opacity: 0.8;
+}
